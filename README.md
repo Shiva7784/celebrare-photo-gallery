@@ -11,8 +11,8 @@
 
 ## 📌 Submission Information
 * **Applicant**: Frontend React Intern Candidate
-* **GitHub Repository**: [Repository Link]
-* **5-Minute Video Recording**: [Google Drive / YouTube Unlisted Link]
+* **GitHub Repository**: https://github.com/Shiva7784/celebrare-photo-gallery.git
+* **5-Minute Video Recording**: https://drive.google.com/file/d/1j9iTg43VjZdd0tulH4RDt2sFRKuvV1gH/view
 * **Google Form - Hardest Part Summary**:
   > *"Handling high-resolution 5000px Picsum image payloads efficiently using dynamic thumbnail dimensions, combined with coordinating clean useReducer state persistence with localStorage."*
 
