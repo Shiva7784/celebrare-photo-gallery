@@ -82,22 +82,7 @@ celebrare-photo-gallery/
 
 ---
 
-## 🎙️ 5-Minute Video Walkthrough Script (For Candidate)
-
-Use this quick cheat-sheet to confidently answer all 5 prompts required by Celebrare:
-
-| Section & Duration | What to Show on Screen | What to Say / Explain |
-|---|---|---|
-| **1. App Working**<br>*(~60 sec)* | Browser at `localhost:5173` | • Reload the page to highlight the **Loading Spinner**.<br>• Type an author name in the search bar to demonstrate **instant filtering** without page reloads.<br>• Click the heart button on 2–3 cards to mark them as favorites.<br>• Reload the browser (`F5`) to prove favorites **persist via `localStorage`**.<br>• Resize the browser window to showcase the **1-col (mobile) $\rightarrow$ 2-col (tablet) $\rightarrow$ 4-col (desktop)** responsive grid. |
-| **2. `useFetchPhotos`**<br>*(~45 sec)* | `src/hooks/useFetchPhotos.js` | *"This custom hook abstracts API operations away from the UI. It returns `{ photos, loading, error }`. Inside `useEffect`, it sets `loading` to true, fetches the 30 photos from Picsum, and sets `photos`. If an error occurs, the `catch` block populates `error`. In both outcomes, `finally` sets `loading` to false."* |
-| **3. `useReducer`**<br>*(~45 sec)* | `src/reducers/favouritesReducer.js` | *"Our reducer handles `TOGGLE_FAVOURITE`. If the ID exists in the array, it filters it out; otherwise, it appends it immutably. I chose `useReducer` because it centralizes state transitions in a pure function away from UI buttons and scales cleanly for collection operations. We use lazy initialization to safely parse `localStorage` only once on mount."* |
-| **4. `useCallback` & `useMemo`**<br>*(~45 sec)* | `src/App.jsx`<br>*(Lines 30–50)* | *"• **`useCallback`**: Memoizes `handleSearchChange`. Because `SearchBar` is wrapped in `React.memo`, this stable reference prevents SearchBar from re-rendering when a user clicks a favorite heart.<br>• **`useMemo`**: Caches `filteredPhotos`. The filter calculation only runs when `searchTerm` or `photos` changes, avoiding expensive array iterations on unrelated renders."* |
-| **5. Hardest Part**<br>*(~45 sec)* | `src/components/PhotoCard.jsx` | *"The most challenging part was optimizing raw Picsum image downloads. Default links were 5000px high-res photos (~120MB total). I resolved this by requesting optimized 600px dynamic thumbnails with `loading="lazy"` and skeleton placeholders, reducing load time and data consumption dramatically."* |
-
----
-
 ## 💻 Local Development Setup
-
 ### 1. Prerequisites
 * Node.js (v18.x or v20.x+)
 * npm (v9.x or v10.x+)
@@ -135,6 +120,6 @@ git commit -m "feat: complete celebrare frontend intern pre-screening assignment
 
 # Push to your GitHub profile
 git branch -M main
-git remote add origin https://github.com/<YOUR_USERNAME>/<YOUR_REPO_NAME>.git
+git remote add origin https://github.com/Shiva7784/celebrare-photo-gallery.git
 git push -u origin main
 ```
